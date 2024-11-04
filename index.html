@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAMMM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="start-screen" class="screen">
+        <button id="start-btn" class="big-button">Start</button> <!-- ปุ่ม Start -->
+    </div>
+    
+    <div class="screen hidden">
+        <h1>ซาหวัดดี</h1>
+        <button class="next-btn">Next</button>
+    </div>
+    
+    <div class="screen hidden">
+        <h1>วันนี้เป็นยังไงบ้าง</h1>
+        <button class="next-btn">Next</button>
+    </div>
+    
+    <div class="screen hidden">
+        <h1>วันนี้เหนื่อยมั้ย</h1>
+        <button class="next-btn">Next</button>
+    </div>
+    
+    <div class="screen hidden">
+        <h1>สู้ๆนะเป็นกำลังใจ</h1>
+        <button class="next-btn">Next</button>
+    </div>
+    
+    <div class="screen hidden">
+        <h1>ปิ้วๆๆๆ</h1>
+        <button class="next-btn">Next</button>
+    </div>
+    
+    <div class="screen hidden">
+        <h1>ขอให้เป็นวันที่ดีนะ</h1>
+        <button class="next-btn">Next</button>
+    </div>
+    
+    <div id="final-message" class="screen hidden">
+        <h1>แบมแข็งแกร่งอยู่แระ!!!!</h1>
+        <button class="next-btn" onclick="window.open('https://youtu.be/cNGjD0VG4R8?si=0o8CA3kYYM7PcJRE', '_blank');">Next</button>
+        <div id="hearts-container" class="hearts"></div>
+        <div id="firework-container"></div> <!-- ที่สำหรับปล่อยดอกไม้ไฟ -->
+    </div>
+
+    <!-- Iframe สำหรับเล่นเพลงจาก YouTube -->
+    <div id="youtube-player" class="hidden">
+        <iframe id="ytplayer" type="text/html" width="0" height="0"
+        src="https://www.youtube.com/embed/KO7WS2sQGGw?autoplay=1&loop=1&playlist=KO7WS2sQGGw"
+        frameborder="0"></iframe>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

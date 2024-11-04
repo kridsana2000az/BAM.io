@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: black; 
+    background: linear-gradient(270deg, #ff7eb3, #ff65a3, #ff80b5, #ff9fb0);
+    background-size: 800% 800%;
+    animation: gradientAnimation 15s ease infinite; /* พื้นหลังไล่สีเคลื่อนไหว */
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+h1 {
+    font-size: 5em; 
+    border: 2px solid white;
+    padding: 20px; 
+    border-radius: 10px; 
+}
+
+.big-button, .next-btn {
+    font-size: 1.5em; 
+    padding: 15px 30px;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer; 
+    transition: transform 0.3s;
+}
+
+.big-button:hover, .next-btn:hover {
+    transform: scale(1.05); 
+}
+
+.hidden {
+    display: none;
+}
+
+#final-message {
+    background-color: pink;
+}
+
+#hearts-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; 
+    overflow: hidden;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Fireworks */
+.firework {
+    width: 10px;
+    height: 10px;
+    background-color: yellow;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    animation: fireworkUp 1s ease-out forwards;
+}
+
+@keyframes fireworkUp {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100vh); }
+}
+
+/* Media Query สำหรับหน้าจอขนาดเล็ก (โทรศัพท์) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em; /* ลดขนาดตัวอักษร */
+        padding: 10px; /* ลด padding */
+    }
+
+    .big-button, .next-btn {
+        font-size: 1.2em; /* ลดขนาดตัวอักษร */
+        padding: 10px 20px; /* ลด padding ของปุ่ม */
+    }
+
+    #hearts-container {
+        font-size: 20px; /* ลดขนาดของหัวใจสำหรับโทรศัพท์ */
+    }
+
+    .firework {
+        width: 5px; /* ขนาดเล็กลงสำหรับโทรศัพท์ */
+        height: 5px; 
+    }
+}
